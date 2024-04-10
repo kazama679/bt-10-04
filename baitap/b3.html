@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function typeConsole(type = "log") {
+            if (typeof console[type] === "function") {
+                console[type](`Đây là type: ${type}`);
+            } else {
+                console.log(`Type ${type} không hợp lệ!`);
+            }
+        }
+        typeConsole(); 
+        typeConsole("warn"); 
+        typeConsole("error"); 
+        typeConsole("info"); 
+    </script>
+</body>
+</html>
